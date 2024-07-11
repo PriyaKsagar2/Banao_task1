@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1440px;
+    height: 72px;
+    border: 2px solid red;
+}
+
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 1440px;
+    height: 72px;
+    border: 2px solid red;
+}
+
+.cse{
+    width: 1440px;
+    height: 440px;
+    border: 2px solid red;
+    background-image: url("assets/img1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content{
+    width: 692px;
+    height: 1751px;
+    margin-left: 200px;
+    border: 2px solid red;
+}
+
+.post{
+    width: 692px;
+    border: 2px solid blue;
+}
+
+.job{
+    width: 692px;
+    border: 2px solid blue;
+}
+
+.post{
+    width: 692px;
+    height: 490px;
+}
+
+#job{
+    width: 692px;
+    height: 269px;
+}
+
+.image img {
+    width: 692px;
+    height: 220px;
+    background-size: contain;
+}
+  
