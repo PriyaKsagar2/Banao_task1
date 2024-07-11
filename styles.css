@@ -6,10 +6,39 @@
 .header{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 1440px;
+    justify-content: space-around;
+    /* width: 1440px; */
     height: 72px;
     border: 2px solid red;
+}
+
+#logo{
+    width: 162.58px;
+    height: 24.01px;
+    background-image: url("assets/logo.jpg");
+    background-size: cover;
+}
+
+#searchbar input{
+    width: 360px;
+    height: 42px;
+    border-radius: 2rem;
+    background-color: #F2F2F2;
+    border: none;
+}
+
+#login p{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    text-align: right;
+}
+
+#login button{
+    width: 24px;
+    height: 24px;
+    background-color: #F2F2F2;
+    border: none;
 }
 
 .filters{
@@ -22,7 +51,7 @@
 }
 
 .cse{
-    width: 1440px;
+    /* width: 1440px; */
     height: 440px;
     border: 2px solid red;
     background-image: url("assets/img1.png");
