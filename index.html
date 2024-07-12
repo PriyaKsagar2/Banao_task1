@@ -1,57 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATG.WORLD</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- header -->
     <div class="header">
-        <div id="logo"></div>
-        
-        <div id="searchbar">
-            <input type="text">
-        </div>
+      <div id="logo"></div>
 
-        <div id="login">
-            <p>Create account: <a href=" " style="text-decoration: none; color:rgb(58, 74, 249) ;">It's Free!</a><button>K</button></p>
-        </div>
-    </div>
-    
-    <div class="cse">
-    </div>
+      <!-- searchbar -->
+      <div id="searchbar">
+        <span class="input-group-text">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+        </span>
+        <input type="text" class="form-control" placeholder=" Search your favourite group in ATG">
+      </div>
 
-    <div class="filters"></div>
-
-    <div class="content" >
-
-        <!-- article -->
-        <div class="post" id="article">
-            <div class="image">
-                <img src="assets/img2.avif" alt="image">
-            </div>
-        </div>
-
-        <!-- education -->
-        <div class="post" id="education">
-            <div class="image">
-                <img src="assets/img3.avif" alt="image" >
-            </div>
-        </div>
-
-        <!-- event -->
-        <div class="post" id="event">
-            <div class="image">
-                <img src="assets/img4.avif" alt="image">
-            </div>
-        </div>
-
-        <!-- job -->
-        <div class="post" id="job">4</div>
-
+      <!-- login -->
+      <div id="login">
+        <p>
+          Create account:
+          <a href=" " style="text-decoration: none; color: rgb(58, 74, 249)">It's Free!</a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-caret-down-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+            />
+          </svg>
+        </p>
+      </div>
     </div>
 
-    <script type="text" src="script.js"></script>
-</body>
+    <!-- group image -->
+    <div class="groupImage"></div>
+
+    <!-- navbar -->
+    <div class="navbar">
+
+        <!-- filters -->
+      <div id="filters">
+        <ul>
+          <li><a href="#" id="all-posts">All posts</a></li>
+          <li><a href="#" id="articles">Article</a></li>
+          <li><a href="#" id="events">Event</a></li>
+          <li><a href="#" id="educations">Education</a></li>
+          <li><a href="#" id="jobs">Job</a></li>
+        </ul>
+      </div>
+
+      <!-- write a post and join group -->
+       <div class="postGroup">
+        <div class="writePost">
+            <pre>Write a post </pre>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-down-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                />
+              </svg>
+           </div>
+           <div class="joinGroup">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+              </svg>
+              <pre>  Join Group</pre>
+           </div>
+       </div>
+    </div>
+
+    <!-- content  section -->
+    <div class="content">
+      <!-- article -->
+      <div class="section" id="article">
+        <div class="image">
+          <img src="assets/img2.avif" alt="image" />
+        </div>
+        <div class="post-content">
+          <div class="post-category">Article</div>
+          <div class="post-title">
+            <div id="title">
+              <p>What if famous brands had regular fonts? Meet RegulaBrands!</p>
+            </div>
+            <div class="knowMore">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="post-description">
+            I've worked in UX for the better part of a decade. From now on, I
+            plan to rein...
+          </div>
+          <div class="post-footer">
+            <div class="post-author">
+              <img src="assets/author1.jpg" alt="Author Image" />
+              <div class="author-info">
+                <div class="author-name">Sarthak Kamra</div>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="views">1.4k views</span>
+              <span class="share-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-share-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- education -->
+      <div class="section" id="education">
+        <div class="image">
+          <img src="assets/img3.avif" alt="image" />
+        </div>
+        <div class="post-content">
+          <div class="post-category">Education</div>
+          <div class="post-title">
+            <div id="title">
+              <p>
+                Tax Benefits for Investment under National Pension Scheme
+                launched by Government
+              </p>
+            </div>
+            <div class="knowMore">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="post-description">
+            I've worked in UX for the better part of a decade. From now on, I
+            plan to rein...
+          </div>
+          <div class="post-footer">
+            <div class="post-author">
+              <img src="assets/author.jpg" alt="Author Image" />
+              <div class="author-info">
+                <div class="author-name">Sarah West</div>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="views">1.4k views</span>
+              <span class="share-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-share-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- event -->
+      <div class="section" id="event">
+        <div class="image">
+          <img src="assets/img4.avif" alt="image" />
+        </div>
+
+        <div class="event-content">
+          <div class="event-category">Meetup</div>
+          <div class="event-title">  
+            <div id="title">
+                <p>
+                    Finance & Investment Elite Social Mixer @Lujiazui
+                </p>
+              </div>
+            <div class="knowMore">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-three-dots"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                  />
+                </svg>
+              </div>
+          </div>
+          <div class="event-details">
+            <div class="event-date">
+              <span class="icon">📅</span> Fri, 12 Oct, 2018
+            </div>
+            <div class="event-location">
+              <span class="icon">📍</span> Ahmedabad, India
+            </div>
+          </div>
+          <div class="visit-link">
+            <a href="#">Visit Website</a>
+          </div>
+        </div>
+        <div class="post-footer" style="padding: 20px;">
+            <div class="post-author">
+              <img src="assets/author3.jpg" alt="Author Image" />
+              <div class="author-info">
+                <div class="author-name">Ronal Jones</div>
+              </div>
+            </div>
+            <div class="post-stats">
+              <span class="views">1.4k views</span>
+              <span class="share-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-share-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+      </div>
+
+      <!-- job -->
+      <div class="section" id="job">
+        <div class="job-content">
+          <div class="job-category">Job</div>
+          <div class="job-title">
+            <div id="title">
+              <p>Software Developer</p>
+            </div>
+            <div class="knowMore">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-three-dots"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="job-company">
+            <span class="company-name">Innovaccer Analytics Private Ltd.</span>
+            <span class="location">Noida, India</span>
+          </div>
+          <div class="apply-link">
+            <a href="#">Apply on Timesjobs</a>
+          </div>
+          <div class="job-footer">
+            <div class="job-author">
+              <img src="assets/author2.jpg" alt="Author Image" />
+              <div class="author-info">
+                <div class="author-name">Joseph Gray</div>
+              </div>
+            </div>
+            <div class="job-stats">
+              <span class="views">1.4k views</span>
+              <span class="share-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-share-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
